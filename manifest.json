@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "kuikui",
+    "version": "1.0",
+    "permissions": [
+        "https://secure.flickr.com/"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["mybackground.js"]
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://ackuikui.com/", "https://*.huawei.com/*"],
+          "js": ["jquery.js", "mycontent.js"]
+        }
+    ]
+
+}
